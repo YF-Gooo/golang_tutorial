@@ -1,0 +1,10 @@
+{
+  "apiPort": 8070,
+  "apiReadTimeout": 5000,
+  "apiWriteTimeout": 5000,
+  "etcdEndpoints": ["0.0.0.0:32770"],
+  "etcdDialTimeout": 5000,
+  "webroot": "./webroot",
+  "mongodbUri": "mongodb://0.0.0.0:27017",
+  "mongodbConnectTimeout": 5000
+}
