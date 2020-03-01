@@ -28,6 +28,10 @@ type FindByJobName struct {
 	JobName string `bson:"jobName"` // JobName赋值为job10
 }
 
+type SortLogByStartTime struct {
+	SortOrder int `bson:"startTime"` // {startTime: -1}
+}
+
 func main() {
 	// mongodb读取回来的是bson, 需要反序列为LogRecord对象
 	var (
@@ -52,9 +56,12 @@ func main() {
 	collection = database.Collection("log")
 
 	// 4, 按照jobName字段过滤, 想找出jobName=job10, 找出5条
-	cond = &FindByJobName{JobName: "job10"} // {"jobName": "job10"}
+	cond = &FindByJobName{JobName: "yifan"} // {"jobName": "job10"}
+	// 任务日志排序规则
 
-	findOptions := options.Find().SetLimit(2).SetSkip(0)
+	logSort := SortLogByStartTime{SortOrder: -1}
+
+	findOptions := options.Find().SetSort(logSort).SetLimit(10).SetSkip(0)
 
 	// 5, 查询（过滤 +翻页参数）
 	if cursor, err = collection.Find(context.TODO(), cond, findOptions); err != nil {

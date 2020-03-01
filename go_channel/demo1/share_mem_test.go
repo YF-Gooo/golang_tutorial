@@ -7,7 +7,7 @@ import (
 )
 
 func TestCounter(t *testing.T) {
-
+	time.Now()
 	counter := 0
 	for i := 0; i < 5000; i++ {
 		go func() {

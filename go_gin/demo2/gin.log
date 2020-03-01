@@ -1,0 +1,16 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /*filepath                --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /*filepath                --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:8080
+[GIN] 2020/02/23 - 11:03:31 | 404 |            0s |     192.168.1.3 | GET      /favicon.ico
+[GIN] 2020/02/23 - 11:04:48 | 304 |            0s |     192.168.1.3 | GET      /
+[GIN] 2020/02/23 - 11:04:52 | 304 |            0s |     192.168.1.3 | GET      /
+[GIN] 2020/02/23 - 11:05:05 | 304 |            0s |     192.168.1.3 | GET      /
+[GIN] 2020/02/23 - 11:05:17 | 200 |    819.6382ms |     192.168.1.3 | GET      /h小说/全部/
+[GIN] 2020/02/23 - 11:05:55 | 200 |    211.9271ms |     192.168.1.3 | GET      /dance/057_Apink(에이핑크) - NoNoNo (Dance Ver.) MV_1080P.mp4
+[GIN] 2020/02/23 - 11:06:06 | 206 |    11.947853s |     192.168.1.3 | GET      /dance/057_Apink(에이핑크) - NoNoNo (Dance Ver.) MV_1080P.mp4
