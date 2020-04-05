@@ -11,5 +11,8 @@ func main() {
 	router.GET("/", func(c *gin.Context) {
 		c.String(http.StatusOK, "Hello World")
 	})
+	router.GET("/t", func(c *gin.Context) {
+		c.Redirect(http.StatusMovedPermanently, "http://www.baidu.com")
+	})
 	router.Run(":8000")
 }

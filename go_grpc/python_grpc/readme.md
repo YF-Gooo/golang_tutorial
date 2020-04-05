@@ -1,2 +1,2 @@
 pip install grpcio grpcio-tools protobuf -i https://pypi.tuna.tsinghua.edu.cn/simple
-protoc -I . –python_out=tmp –grpc_out=tmp –plugin=protoc-gen-grpc=tmp/grpc_python_plugin helloworld.proto
+python -m grpc_tools.protoc -I ./ --python_out=./ --grpc_python_out=./ helloworld.proto
