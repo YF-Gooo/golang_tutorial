@@ -1,0 +1,3 @@
+这个demo采用protobuf来编解码二进制,编码后的二进制9942个bytes并没有被压缩。未用protobuf的demo2只用了9939个bytes
+因为是传输二进制，个人认为没必要使用protobuf
+protobuf适合结构的json
